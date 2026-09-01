@@ -16,8 +16,8 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node Server.js",
-    "dev": "nodemon Server.js"
+    "start": "node init && node Server.js",
+    "dev": "node init && nodemon Server.js"
   },
   "keywords": [],
   "author": "",
