@@ -14,7 +14,10 @@ export const verifyWebhook = (req, res) => {
 };
 
 export const receiveWebhook = (req, res) => {
-  console.log("WhatsApp Webhook:", JSON.stringify(req.body, null, 2));
+  console.log("=================================");
+  console.log("WHATSAPP WEBHOOK POST RECEIVED");
+  console.log("=================================");
+  console.log(JSON.stringify(req.body, null, 2));
 
   return res.sendStatus(200);
 };
