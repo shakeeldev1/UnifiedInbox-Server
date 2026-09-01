@@ -7,6 +7,7 @@ import messageRoutes from "./modules/messages/message.routes.js";
 import errorHandler from "./middleware/error.middleware.js";
 import notFound from "./middleware/notFound.middleware.js";
 import whatsappRoutes from "./modules/channels/whatsapp/whatsapp.routes.js";
+import conversationRoutes from "./modules/conversations/conversation.routes.js";
 
 const app = express();
 
@@ -35,6 +36,7 @@ app.get("/api/health", (req, res) => {
 
 app.use("/api/messages", messageRoutes);
 app.use("/api/webhooks/whatsapp", whatsappRoutes);
+app.use("/api/conversations", conversationRoutes);
 
 app.use(notFound);
 app.use(errorHandler);
